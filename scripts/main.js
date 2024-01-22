@@ -9,20 +9,14 @@ myImage.onclick = () => {
   }
 };
 
-let myButton = document.querySelector("button");
+const showImageButton = document.getElementById("show-image-button");
+const babyImage = document.getElementById("my-image"); 
+showImageButton.addEventListener("click", () => { 
+  babyImage.style.display = "block"; 
+});
+
 let myHeading = document.querySelector("h1");
 
-function setUserName() {
-    const myName = prompt("Please enter your name.");
-    if (!myName) {
-      setUserName();
-    } else {
-      localStorage.setItem("name", myName);
-      myHeading.textContent = `Mozilla is cool, ${myName}`;
-    }
-  }
 
 
-  myButton.onclick = () => {
-    setUserName();
-  };
+
